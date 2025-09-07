@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arella Saikumar Yadav — Portfolio</title>
+  <meta name="description" content="Onsite Support Engineer (Wipro Limited, Client: ABB). ServiceNow, Incident Management, Asset Management, IT Automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --brand: #1e3a8a; /* navy */
+      --brand-2: #2563eb; /* blue accent */
+      --card: #f8fafc;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1080px;margin:0 auto;padding:0 20px}
+    /* Hero */
+    .hero-wrap{
+      background: linear-gradient(135deg, rgba(30,58,138,.08), rgba(37,99,235,.06));
+      border-bottom:1px solid var(--line);
+    }
+    .hero{padding:56px 0 42px; display:grid; grid-template-columns: 80px 1fr; gap: 18px; align-items:center;}
+    .avatar{
+      width:72px; height:72px; border-radius:999px; display:grid; place-items:center;
+      color:#fff; font-weight:800; background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 6px 18px rgba(30,58,138,.15);
+    }
+    .hero h1{font-size:clamp(28px, 4vw, 40px); margin:0 0 4px 0; letter-spacing:.2px}
+    .hero .role{color:var(--muted); margin:0 0 12px 0}
+    .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:12px; border:1px solid var(--line); background:#fff; transition:.16s; font-weight:600}
+    .btn:hover{transform: translateY(-1px); box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#fff; border-color:transparent}
+    .btn.primary:hover{box-shadow:0 8px 22px rgba(37,99,235,.25)}
+    /* Sections */
+    section{padding:28px 0}
+    .section-title{font-size:20px; font-weight:800; letter-spacing:.3px; margin:0 0 14px 0; position:relative}
+    .section-title:after{content:''; position:absolute; left:0; bottom:-8px; width:52px; height:3px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); border-radius:3px}
+    .grid{display:grid; gap:18px}
+    .twocol{grid-template-columns: 1fr; }
+    @media(min-width: 960px){ .twocol{grid-template-columns: 1fr 1fr;} }
+    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px}
+    ul.clean{margin:10px 0 0 18px}
+    ul.clean li{margin:8px 0; color:var(--text)}
+    .pill{display:inline-block; padding:8px 12px; border-radius:999px; background:#eef2ff; color:#1e3a8a; border:1px solid #c7d2fe; margin:6px 6px 0 0; font-size:13px; font-weight:600}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid var(--line); padding:22px 0; color:var(--muted); font-size:14px; margin-top:8px}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React UMD + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const App = () => {
+      const resumeHref = "./Arella_Saikumar_Yadav_Resume.pdf";
+      return (
+        <>
+          <div className="hero-wrap">
+            <div className="container hero">
+              <div className="avatar">AY</div>
+              <div>
+                <h1>Arella Saikumar Yadav</h1>
+                <p className="role">Onsite Support Engineer · Wipro Limited (Client: ABB)</p>
+                <div className="actions">
+                  <a className="btn primary" href={resumeHref} target="_blank" rel="noopener">Resume</a>
+                  <a className="btn" href="https://www.linkedin.com/in/arella-saikumar-yadav-84337037a" target="_blank" rel="noopener">LinkedIn</a>
+                  <a className="btn" href="mailto:arella.sai05@gmail.com">Email</a>
+                  <a className="btn" href="tel:+918688765073">Call</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <main className="container">
+            <section className="grid twocol">
+              <div className="card">
+                <h2 className="section-title">About</h2>
+                <p className="muted">
+                  Onsite Support Engineer with hands-on experience in ServiceNow, Incident Management, Asset Management, and automation initiatives
+                  such as Autopilot and Self‑Provisioning. Focused on SLA adherence, clean documentation, and improving end-user onboarding.
+                </p>
+              </div>
+              <div className="card">
+                <h2 className="section-title">Core Skills</h2>
+                <div>
+                  {[
+                    "Incident Management & Resolution",
+                    "ServiceNow (ticketing, reporting, dashboards)",
+                    "Asset Management & ITIL Process Knowledge",
+                    "Problem & Change Management Support",
+                    "Root Cause Analysis & Troubleshooting",
+                    "Autopilot Testing",
+                    "User Self‑Provisioning",
+                    "SLA & OLA Compliance",
+                    "Client Support & Communication"
+                  ].map((s,i)=>(<span key={i} className="pill">{s}</span>))}
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div className="card">
+                <h2 className="section-title">Professional Experience</h2>
+                <div style={{marginBottom: 4, fontWeight: 700}}>Wipro Limited — Onsite Support Engineer (Client: ABB)</div>
+                <div className="muted">Bengaluru | September 2024 – Present</div>
+                <ul className="clean">
+                  <li>Provide onsite technical support to ABB as part of a client‑service team.</li>
+                  <li>Manage ServiceNow ticketing, configure reports and dashboards to improve efficiency.</li>
+                  <li>Handle Incident Management, ensuring SLA adherence and timely resolution.</li>
+                  <li>Oversee asset tracking and maintenance processes.</li>
+                  <li>Participate in automation initiatives including Autopilot Testing and User Self‑Provisioning.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <div className="card">
+                <h2 className="section-title">Projects</h2>
+                <div className="grid" style={{gridTemplateColumns: '1fr', gap: 14}}>
+                  <div className="card" style={{padding:16}}>
+                    <div style={{fontWeight:700}}>ServiceNow Reports & Dashboards</div>
+                    <div className="muted">Designed and configured dashboards to monitor incidents and service requests; improved SLA compliance and prioritization.</div>
+                  </div>
+                  <div className="card" style={{padding:16}}>
+                    <div style={{fontWeight:700}}>Autopilot Testing (Automation Initiative – ABB)</div>
+                    <div className="muted">Streamlined IT asset deployment; validated device readiness and compliance before issuance; accelerated provisioning.</div>
+                  </div>
+                  <div className="card" style={{padding:16}}>
+                    <div style={{fontWeight:700}}>User Self‑Provisioning (SPOC – India)</div>
+                    <div className="muted">Enabled direct laptop issuance without IT team configuration; improved IT efficiency and onboarding experience.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="grid twocol">
+              <div className="card">
+                <h2 className="section-title">Education</h2>
+                <ul className="clean">
+                  <li><b>B.Sc (Graduation)</b> – Sri Vaishnavi Degree College, Yogi Vemana University | 2019–2022 | 68%</li>
+                  <li><b>12th (MPC)</b> – Narayana Junior College, BIE Andhra Pradesh | 2016–2018 | 91.8%</li>
+                  <li><b>10th</b> – Raju High School, AP Board of Secondary Education | 2016 | GPA: 9.2</li>
+                </ul>
+              </div>
+              <div className="card">
+                <h2 className="section-title">Strengths</h2>
+                <ul className="clean">
+                  <li>Quick learner; rapidly adapts to new technologies.</li>
+                  <li>Works effectively both individually and as part of a team.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <div className="card">
+                <h2 className="section-title">Contact</h2>
+                <ul className="clean">
+                  <li>📧 <a href="mailto:arella.sai05@gmail.com">arella.sai05@gmail.com</a></li>
+                  <li>📞 <a href="tel:+918688765073">+91 8688765073</a></li>
+                  <li>🔗 <a href="https://www.linkedin.com/in/arella-saikumar-yadav-84337037a" target="_blank" rel="noopener">linkedin.com/in/arella-saikumar-yadav-84337037a</a></li>
+                  <li>📄 <a href={resumeHref} target="_blank" rel="noopener">Resume</a></li>
+                </ul>
+              </div>
+            </section>
+          </main>
+
+          <footer>
+            <div className="container">© {new Date().getFullYear()} Arella Saikumar Yadav. All rights reserved.</div>
+          </footer>
+        </>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
